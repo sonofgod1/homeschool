@@ -1,0 +1,13 @@
+# Archivos que graphify no debe procesar
+.aider.*
+node_modules/
+**/node_modules/
+.venv/
+venv/
+__pycache__/
+dist/
+build/
+.next/
+**/.next/
+*.log
+graphify-out/

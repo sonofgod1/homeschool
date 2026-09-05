@@ -1,0 +1,32 @@
+# CODEOWNERS — el equivalente profesional de .claude/protected.txt.
+#
+# Diferencia importante: protected.txt lo hace cumplir un hook en TU máquina y
+# solo en Claude Code. Esto lo hace cumplir GitHub en el servidor, para todos
+# los editores y todas las personas, y no se puede desactivar localmente.
+#
+# Para que sirva de algo hay que activarlo en el repo:
+#   Settings → Branches → Add rule para `main` y `develop`
+#     ☑ Require a pull request before merging
+#     ☑ Require review from Code Owners
+#     ☑ Require status checks to pass  → selecciona los jobs de CI
+#
+# /git-setup (o @git-setup) imprime los comandos de `gh` para hacerlo.
+#
+# Owner del repositorio: @sonofgod1
+# Sin un usuario real aquí, GitHub ignora el archivo entero.
+
+# Decisiones de arquitectura y contratos: cambiarlos es decisión de producto.
+/docs/adr/                @sonofgod1
+/docs/contracts/          @sonofgod1
+
+# El norte del proyecto y las reglas duras.
+/CLAUDE.md                @sonofgod1
+/.cursor/rules/00-gobernanza.mdc  @sonofgod1
+
+# La gobernanza misma: comandos, hooks y lista de archivos protegidos.
+/.claude/                 @sonofgod1
+/.cursor/                 @sonofgod1
+/git-hooks/               @sonofgod1
+
+# El CI y los propios CODEOWNERS: si cualquiera puede editarlos, no protegen nada.
+/.github/                 @sonofgod1
